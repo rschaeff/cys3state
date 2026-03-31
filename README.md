@@ -69,8 +69,6 @@ sp|P80882|RUBR_CLOSR   68         0.0114      0.0465      0.9421
 
 Training data (labeled cysteines and sequences) is available at [Zenodo DOI: TODO].
 
-Retrain the classifier from your own labeled cysteine data:
-
 ```bash
 python train.py labels.tsv sequences.fasta -o output_dir/
 
