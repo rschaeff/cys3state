@@ -30,8 +30,8 @@ import esm
 # ---------------------------------------------------------------------------
 
 class FunctionalSitePredictor(nn.Module):
-    def __init__(self, embedding_dim=1280, hidden_dim=256,
-                 num_classes=3, dropout_rate=0.6):
+    def __init__(self, embedding_dim=1280, hidden_dim=128,
+                 num_classes=3, dropout_rate=0.2):
         super().__init__()
         self.fc1 = nn.Linear(embedding_dim, hidden_dim)
         self.bn1 = nn.BatchNorm1d(hidden_dim)

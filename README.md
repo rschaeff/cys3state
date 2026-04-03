@@ -47,10 +47,10 @@ Tab-separated, one row per cysteine:
 
 ```
 Protein                Residue    Neg_prob    Dis_prob    Met_prob
-sp|P80882|RUBR_CLOSR   38         0.0110      0.0827      0.9063
-sp|P80882|RUBR_CLOSR   41         0.0112      0.0149      0.9739
-sp|P80882|RUBR_CLOSR   54         0.0101      0.0404      0.9494
-sp|P80882|RUBR_CLOSR   68         0.0114      0.0465      0.9421
+sp|P80882|RUBR_CLOSR   38         0.0011      0.0350      0.9639
+sp|P80882|RUBR_CLOSR   41         0.0011      0.0133      0.9855
+sp|P80882|RUBR_CLOSR   54         0.0014      0.0142      0.9844
+sp|P80882|RUBR_CLOSR   68         0.0024      0.1264      0.8711
 ```
 
 - **Neg_prob**: Probability of reduced/negative state
@@ -100,8 +100,8 @@ to use them with `predict.py`.
 | `--folds` | 5 | Number of cross-validation folds |
 | `--epochs` | 50 | Max epochs per fold |
 | `--lr` | 0.00004 | Learning rate |
-| `--hidden-dim` | 256 | Hidden layer size |
-| `--dropout` | 0.6 | Dropout rate |
+| `--hidden-dim` | 128 | Hidden layer size |
+| `--dropout` | 0.2 | Dropout rate |
 | `--batch-size` | 64 | Training batch size |
 | `--focal-gamma` | 2.0 | Focal loss gamma |
 | `--patience` | 10 | Early stopping patience |
@@ -113,7 +113,7 @@ to use them with `predict.py`.
 
 1. Sequences are parsed from FASTA input
 2. ESM2-650M extracts per-residue embeddings (1280-dim, frozen)
-3. Embeddings at cysteine positions are fed to a 5-model ensemble of 2-layer MLPs (1280 → 256 → 3)
+3. Embeddings at cysteine positions are fed to a 5-model ensemble of 2-layer MLPs (1280 → 128 → 3)
 4. Softmax probabilities are averaged across the ensemble
 5. Results are written incrementally (streaming — memory bounded by ESM2 forward pass, not dataset size)
 

@@ -457,10 +457,10 @@ def main():
                         help="Max epochs per fold (default: 50)")
     parser.add_argument("--lr", type=float, default=0.00004,
                         help="Learning rate (default: 0.00004)")
-    parser.add_argument("--hidden-dim", type=int, default=256,
-                        help="Hidden layer size (default: 256)")
-    parser.add_argument("--dropout", type=float, default=0.6,
-                        help="Dropout rate (default: 0.6)")
+    parser.add_argument("--hidden-dim", type=int, default=128,
+                        help="Hidden layer size (default: 128)")
+    parser.add_argument("--dropout", type=float, default=0.2,
+                        help="Dropout rate (default: 0.2)")
     parser.add_argument("--batch-size", type=int, default=64,
                         help="Training batch size (default: 64)")
     parser.add_argument("--focal-gamma", type=float, default=2.0,

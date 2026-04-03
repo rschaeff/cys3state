@@ -78,16 +78,15 @@ GROUND_TRUTH = [
 # Format: (protein, residue, neg, dis, met)
 REFERENCE_PREDICTIONS = [
     # Values from running this pipeline (predict.py) on CPU.
-    # Minor differences from the production pipeline are expected due to
-    # different ESM2 batching (all 4 proteins in one batch here vs sharded).
-    ("P80882",  38, 0.0110, 0.0827, 0.9063),
-    ("P80882",  41, 0.0112, 0.0149, 0.9739),
-    ("P80882",  54, 0.0101, 0.0404, 0.9494),
-    ("P80882",  68, 0.0114, 0.0465, 0.9421),
-    ("P37237", 162, 0.0077, 0.9667, 0.0256),
-    ("P37237", 180, 0.0433, 0.9343, 0.0224),
-    ("D3S6S2", 106, 0.0139, 0.0101, 0.9759),
-    ("D3S6S2", 141, 0.0075, 0.0065, 0.9861),
+    # Model: hidden_dim=128, dropout=0.2 (retrained weights).
+    ("P80882",  38, 0.0011, 0.0350, 0.9639),
+    ("P80882",  41, 0.0011, 0.0133, 0.9855),
+    ("P80882",  54, 0.0014, 0.0142, 0.9844),
+    ("P80882",  68, 0.0024, 0.1264, 0.8711),
+    ("P37237", 162, 0.0005, 0.9993, 0.0002),
+    ("P37237", 180, 0.0088, 0.9873, 0.0039),
+    ("D3S6S2", 106, 0.0010, 0.0012, 0.9978),
+    ("D3S6S2", 141, 0.0001, 0.0003, 0.9996),
 ]
 
 
