@@ -1,12 +1,18 @@
-# cys3state — ESM2 Cysteine State Predictor
+# tricyp — ESM2 Cysteine State Predictor
 
 Predicts whether each cysteine in a protein is **metal-binding**, **disulfide-bonded**, or **reduced/negative** using a 5-model ensemble classifier on frozen ESM2-650M embeddings.
+
+> Previously published as `rschaeff/cys3state`; now maintained at
+> [`conglab2020/tricyp`](https://github.com/conglab2020/tricyp).
 
 ## Installation
 
 ```bash
-conda create -n cys3state python=3.9
-conda activate cys3state
+git clone https://github.com/conglab2020/tricyp.git
+cd tricyp
+
+conda create -n tricyp python=3.9
+conda activate tricyp
 pip install numpy==1.26.4
 pip install torch==2.1.0
 pip install fair-esm==2.0.0
