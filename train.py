@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Train the cys3state classifier from labeled cysteine data.
+Train the tricyp classifier from labeled cysteine data.
 
 Takes a labels TSV and a FASTA file, extracts ESM2-650M embeddings,
 and trains a K-fold ensemble of 2-layer MLP classifiers using focal loss.
@@ -444,7 +444,7 @@ def train_fold(fold_label, train_X, train_y, val_X, val_y, args, device):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Train the cys3state classifier from labeled cysteine data.")
+        description="Train the tricyp classifier from labeled cysteine data.")
     parser.add_argument("labels", help="Labels TSV (Protein, Residue, Label)")
     parser.add_argument("sequences", help="FASTA file with protein sequences")
     parser.add_argument("-o", "--output-dir", required=True,

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Integration tests for cys3state predictor.
+Integration tests for tricyp predictor.
 
 Runs the ensemble on proteins with known cysteine functional states and
 checks that predictions match ground truth from PDB structural evidence.
@@ -120,7 +120,7 @@ def _parse_output(path):
 @pytest.fixture(scope="session")
 def predictions(tmp_path_factory):
     """Run predict.py once on all test proteins, return parsed results."""
-    tmpdir = tmp_path_factory.mktemp("cys3state")
+    tmpdir = tmp_path_factory.mktemp("tricyp")
     fasta_path = str(tmpdir / "test.fasta")
     output_path = str(tmpdir / "predictions.tsv")
 
